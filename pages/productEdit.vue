@@ -1,7 +1,7 @@
 <template>
   <div class="container">
   <btnReturn />
-  <h2>Edit Product {{product.id}}</h2>
+  <h2>Edit Product {{product.name}}</h2>
   <b-form @submit="up(product.id)" v-bind:key="product.id">       
         <b-form-group id="input-group" label="Name" label-for="input">
             <b-form-input
