@@ -44,14 +44,17 @@ module.exports = {
 
   axios: {
     prefix: '/',
+    credentials: false,
+    baseURL: 'https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app'
   },
    
   proxy: {
     '/': {
-      target: 'http://localhost:8000',
+      target: 'https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app',
       pathRewrite: {
         '^/': '/'
-      }
+      },
+      changeOrigin: true
     }
   },
 
