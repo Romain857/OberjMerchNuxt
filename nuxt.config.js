@@ -48,6 +48,10 @@ module.exports = {
     baseURL: '/',
   },
 
+  proxy: {
+    '/': { target: 'https://localhost:8000/', pathRewrite: {'^/': ''}, changeOrigin: true }
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
