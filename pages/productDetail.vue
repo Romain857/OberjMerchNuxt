@@ -1,10 +1,6 @@
 <template>
   <div class="container">
-  <btnReturn />
   <h2>Detail Product</h2>
-   <b-button v-on:click="del(product.id)" class="btn btn-danger"
-        >Supprimer
-    </b-button>
     <b-list-group>
         <b-list-group-item>{{product.id}}</b-list-group-item>
         <b-list-group-item>{{product.name}}</b-list-group-item>
@@ -12,6 +8,10 @@
         <b-list-group-item>{{product.description}}</b-list-group-item>
         <b-list-group-item>{{product.is_offer}}</b-list-group-item>
     </b-list-group>
+    <btnReturn />
+    <b-button v-on:click="del(product.id)" class="btn btn-danger"
+        >Supprimer
+    </b-button>
   </div>
 </template>
 

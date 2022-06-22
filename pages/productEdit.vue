@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-  <btnReturn />
   <h2>Edit Product {{product.name}}</h2>
   <b-form @submit="up(product.id)" v-bind:key="product.id">       
         <b-form-group id="input-group" label="Name" label-for="input">
@@ -30,6 +29,7 @@
                 placeholder="is_offer"
             ></b-form-input>
         </b-form-group>
+        <btnReturn />
         <b-button type="submit" variant="primary">Submit</b-button>
     </b-form>
   </div>
@@ -52,7 +52,6 @@ export default {
           name: this.product.name,
           price: this.product.price,
           description: this.product.description,
-          img: this.product.img,
           is_offer: this.product.is_offer,
         })
         .then(
