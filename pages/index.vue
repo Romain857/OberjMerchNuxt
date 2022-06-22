@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>Product</h1>
+        <h1>OberjMerch</h1>
         <btnCreate />
         <div v-for="product in products">
             <b-card
@@ -14,7 +14,7 @@
                     {{product.description}}
                     {{product.is_offer}}
                 </b-card-text>
-                <b-button :to="{ name: 'productEdit', params: { id: product.id } }" variant="warning">Edit</b-button>
+                <b-button :to="{ name: 'productEdit', params: { id: product.id } }" variant="warning">Modifier</b-button>
                 <b-button :to="{ name: 'productDetail', params: { id: product.id } }" variant="primary">Detail</b-button>
             </b-card>
         </div>
@@ -28,7 +28,7 @@ export default {
     return {};
   },
   async asyncData({ params, $axios }) {
-    const products = await $axios.$get('http://localhost:8000/products');
+    const products = await $axios.$get('https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/products');
     return { products };
   },
 };

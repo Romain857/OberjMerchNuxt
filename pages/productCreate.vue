@@ -2,13 +2,13 @@
   <div class="container">
         <b-form @submit.prevent="submit">
           <b-container fluid>
-            <h2 id="title">New Product</h2>
+            <h2 id="title">Ajouter un produit</h2>
             <b-row class="my-3">
 
             <b-input-group class="input" >
                 <template #prepend>
                   <b-input-group-text class="label"
-                    >Name</b-input-group-text
+                    >Nom</b-input-group-text
                   >
                 </template>
                 <b-form-input
@@ -21,7 +21,7 @@
               <b-input-group class="input">
                 <template #prepend>
                   <b-input-group-text class="label"
-                    >Price</b-input-group-text
+                    >Prix</b-input-group-text
                   >
                 </template>
                 <b-form-input
@@ -47,7 +47,7 @@
                 <b-input-group class="input">
                 <template #prepend>
                   <b-input-group-text class="label"
-                    >Is_offer</b-input-group-text
+                    >En vente</b-input-group-text
                   >
                 </template>
                 <b-form-input
@@ -61,7 +61,7 @@
           </b-container>
           <btnReturn />
           <b-button id="submit" type="submit" variant="primary"
-            >Submit</b-button
+            >Ajouter</b-button
           >
         </b-form>
   </div>
@@ -81,7 +81,7 @@ export default {
   methods: {
     submit() {
       axios
-        .post("http://localhost:8000/product", {
+        .post("https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/product", {
           name: this.name,
           price: this.price,
           description: this.description,

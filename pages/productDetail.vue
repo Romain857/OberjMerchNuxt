@@ -1,17 +1,18 @@
 <template>
   <div class="container">
-  <h2>Detail Product</h2>
+  <h2>Detail du produit</h2>
     <b-list-group>
-        <b-list-group-item>{{product.id}}</b-list-group-item>
-        <b-list-group-item>{{product.name}}</b-list-group-item>
-        <b-list-group-item>{{product.price}}</b-list-group-item>
-        <b-list-group-item>{{product.description}}</b-list-group-item>
-        <b-list-group-item>{{product.is_offer}}</b-list-group-item>
+      <b-list-group-item><strong>Nom : </strong>{{product.name}}</b-list-group-item>
+      <b-list-group-item><strong>Prix : </strong>{{product.price}}</b-list-group-item>
+      <b-list-group-item><strong>Description : </strong>{{product.description}}</b-list-group-item>
+      <b-list-group-item><strong>En vente : </strong>{{product.is_offer}}</b-list-group-item>
     </b-list-group>
-    <btnReturn />
-    <b-button v-on:click="del(product.id)" class="btn btn-danger"
-        >Supprimer
-    </b-button>
+    <div class="divBtns">
+      <btnReturn />
+      <b-button v-on:click="del(product.id)" class="btn btn-danger"
+          >Supprimer
+      </b-button>
+    </div>
   </div>
 </template>
 
@@ -25,14 +26,14 @@ export default {
   },
   async asyncData({ params, $axios }) {
     const product = await $axios.$get(
-      `http://localhost:8000/product/${params.id}`
+      `https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/product/${params.id}`
     );
     return { product };
   },
   methods: {
     del(id) {
       axios
-        .delete("http://localhost:8000/product/" + id)
+        .delete("https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/product/" + id)
         .then((window.location.href = "/"))
         .catch((error) => {
           this.errors = error.response.data.errors;
