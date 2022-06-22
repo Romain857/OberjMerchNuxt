@@ -28,7 +28,7 @@ export default {
     return {};
   },
   async asyncData({ params, $axios }) {
-    const products = await $axios.$get('https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/products');
+    const products = await $axios.$get('http://localhost:8000/products');
     return { products };
   },
 };
