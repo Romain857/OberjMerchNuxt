@@ -57,7 +57,7 @@ export default {
         })
         .then(
           function (response) {
-            window.location.href = "/product";
+            window.location.href = "/";
           }.bind(this)
         );
     },

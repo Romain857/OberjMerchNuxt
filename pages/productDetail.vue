@@ -33,7 +33,7 @@ export default {
     del(id) {
       axios
         .delete("http://localhost:8000/product/" + id)
-        .then((window.location.href = "/product"))
+        .then((window.location.href = "/"))
         .catch((error) => {
           this.errors = error.response.data.errors;
         });
