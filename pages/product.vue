@@ -1,0 +1,39 @@
+<template>
+    <div class="container">
+        <h1>Product</h1>
+        <btnCreate />
+        <div v-for="product in products">
+            <b-card
+                tag="product"
+                style="max-width: 20rem;"
+                class="mb-2"
+            >
+                <b-card-text>
+                    {{product.name}}
+                    {{product.price}}
+                    {{product.description}}
+                    {{product.is_offer}}
+                </b-card-text>
+                <b-button :to="{ name: 'productEdit', params: { id: product.id } }" variant="warning">Edit</b-button>
+                <b-button :to="{ name: 'productDetail', params: { id: product.id } }" variant="primary">Detail</b-button>
+            </b-card>
+        </div>
+    </div>
+</template>
+
+<script>
+import axios from "axios";
+export default {
+  data() {
+    return {};
+  },
+  async asyncData({ params, $axios }) {
+    const products = await $axios.$get('http://localhost:8000/products');
+    return { products };
+  },
+};
+</script>
+
+<style scoped>
+@import "~/assets/style/product.css";
+</style>
