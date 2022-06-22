@@ -1,66 +1,57 @@
 <template>
   <div class="container">
-  <btnReturn />
         <b-form @submit.prevent="submit">
           <b-container fluid>
             <h2 id="title">New Product</h2>
             <b-row class="my-3">
 
-            <b-input-group >
+            <b-input-group class="input" >
                 <template #prepend>
-                  <b-input-group-text
+                  <b-input-group-text class="label"
                     >Name</b-input-group-text
                   >
                 </template>
                 <b-form-input
+                  class="champs"
                   v-model="name"
                   required
                 ></b-form-input>
               </b-input-group>
 
-              <b-input-group >
+              <b-input-group class="input">
                 <template #prepend>
-                  <b-input-group-text
+                  <b-input-group-text class="label"
                     >Price</b-input-group-text
                   >
                 </template>
                 <b-form-input
+                  class="champs"
                   v-model="price"
                   required
                 ></b-form-input>
               </b-input-group>
 
-              <b-input-group >
+              <b-input-group class="input">
                 <template #prepend>
-                  <b-input-group-text
+                  <b-input-group-text class="label"
                     >Description</b-input-group-text
                   >
                 </template>
                 <b-form-input
+                  class="champs"
                   v-model="description"
                   required
                 ></b-form-input>
               </b-input-group>
 
-              <b-input-group >
+                <b-input-group class="input">
                 <template #prepend>
-                  <b-input-group-text
-                    >Image</b-input-group-text
-                  >
-                </template>
-                <b-form-input
-                  v-model="img"
-                  required
-                ></b-form-input>
-              </b-input-group>
-
-                <b-input-group >
-                <template #prepend>
-                  <b-input-group-text
+                  <b-input-group-text class="label"
                     >Is_offer</b-input-group-text
                   >
                 </template>
                 <b-form-input
+                  class="champs"
                   v-model="is_offer"
                   required
                 ></b-form-input>
@@ -68,6 +59,7 @@
 
             </b-row>
           </b-container>
+          <btnReturn />
           <b-button id="submit" type="submit" variant="primary"
             >Submit</b-button
           >
@@ -83,7 +75,6 @@ export default {
             name:"",
             price:"",
             description:"",
-            img:"",
             is_offer:""
         }
     },
@@ -94,7 +85,6 @@ export default {
           name: this.name,
           price: this.price,
           description: this.description,
-          img: this.img,
           is_offer: this.is_offer
         })
         .then(
