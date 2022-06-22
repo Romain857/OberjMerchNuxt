@@ -46,12 +46,12 @@ module.exports = {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'https://localhost:8000/',
+    baseURL: '/',
     proxy: true,
   },
 
   proxy: {
-    '/': { target: 'https://localhost:8000/', pathRewrite: {'^/': ''}, changeOrigin: true }
+    '/product/': { target: 'https://localhost:8000/product', pathRewrite: {'^/product/': ''}, changeOrigin: true }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
