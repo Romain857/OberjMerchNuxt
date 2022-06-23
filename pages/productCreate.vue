@@ -88,7 +88,7 @@ export default {
   methods: {
     submit() {
       axios
-        .post("https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/product", {
+        .post("https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/products", {
           name: this.name,
           price: this.price,
           description: this.description,

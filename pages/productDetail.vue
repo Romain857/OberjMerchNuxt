@@ -41,14 +41,14 @@ export default {
   },
   async asyncData({ params, $axios }) {
     const product = await $axios.$get(
-      `https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/product/${params.id}`
+      `https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/products/${params.id}`
     );
     return { product };
   },
   methods: {
     del(id) {
       axios
-        .delete("https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/product/" + id)
+        .delete("https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/products/" + id)
         .then((window.location.href = "/"))
         .catch((error) => {
           this.errors = error.response.data.errors;
