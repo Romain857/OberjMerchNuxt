@@ -14,7 +14,7 @@
           <b-dropdown-item href="#">Gabriel</b-dropdown-item>
           <b-dropdown-item href="#">Romain</b-dropdown-item>
           <b-dropdown-item href="#">Antoine</b-dropdown-item>
-          <b-dropdown-item href="#">Yorhann</b-dropdown-item>
+          <b-dropdown-item href="#">Yohann</b-dropdown-item>
         </b-nav-item-dropdown>
 
       </b-navbar-nav>
