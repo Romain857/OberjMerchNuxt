@@ -59,7 +59,7 @@
                     unchecked-value="false"
                   ></b-form-checkbox>
                 </b-input-group-prepend>
-                <b-form-input class="champs" v-model="is_offer">{{
+                <b-form-input class="champs" v-model="is_offer" disabled>{{
                   is_offer
                 }}</b-form-input>
               </b-input-group>

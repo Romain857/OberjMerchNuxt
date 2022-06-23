@@ -3,7 +3,7 @@
 <Header />
   <div class="container">
   <h2>Modifier le produit : {{product.name}}</h2>
-  <b-form @submit="up(product.id)" v-bind:key="product.id">       
+  <b-form @submit.prevent="up(product.id)" v-bind:key="product.id">       
         <b-form-group label="Nom" label-for="input">
             <b-form-input
                 v-model="product.name"
@@ -13,6 +13,7 @@
         
         <b-form-group label="Prix" label-for="input">
             <b-form-input
+                type="number"
                 v-model="product.price"
                 placeholder="prix"
             ></b-form-input>
@@ -34,7 +35,7 @@
                     unchecked-value="false"
                   ></b-form-checkbox>
                 </b-input-group-prepend>
-                <b-form-input class="champs" v-model="product.is_offer">{{
+                <b-form-input class="champs" v-model="product.is_offer" disabled>{{
                   is_offer
                 }}</b-form-input>
               </b-input-group>
