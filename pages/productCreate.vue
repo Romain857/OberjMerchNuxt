@@ -1,4 +1,6 @@
 <template>
+<div>
+<Header />
   <div class="container">
         <b-form @submit.prevent="submit">
           <b-container fluid>
@@ -25,6 +27,7 @@
                   >
                 </template>
                 <b-form-input
+                  type="number"
                   class="champs"
                   v-model="price"
                   required
@@ -44,19 +47,22 @@
                 ></b-form-input>
               </b-input-group>
 
-                <b-input-group class="input">
+              <b-input-group class="input">
                 <template #prepend>
-                  <b-input-group-text class="label"
-                    >En vente</b-input-group-text
-                  >
+                  <b-input-group-text class="label">En vente</b-input-group-text>
                 </template>
-                <b-form-input
-                  class="champs"
-                  v-model="is_offer"
-                  required
-                ></b-form-input>
+                <b-input-group-prepend is-text>
+                  <b-form-checkbox
+                    v-model="is_offer"
+                    type="checkbox"
+                    value="true"
+                    unchecked-value="false"
+                  ></b-form-checkbox>
+                </b-input-group-prepend>
+                <b-form-input class="champs" v-model="is_offer">{{
+                  is_offer
+                }}</b-form-input>
               </b-input-group>
-
             </b-row>
           </b-container>
           <btnReturn />
@@ -64,6 +70,7 @@
             >Ajouter</b-button
           >
         </b-form>
+  </div>
   </div>
 </template>
 
@@ -75,7 +82,7 @@ export default {
             name:"",
             price:"",
             description:"",
-            is_offer:""
+            is_offer:"true"
         }
     },
   methods: {

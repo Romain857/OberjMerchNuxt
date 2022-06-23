@@ -1,4 +1,6 @@
 <template>
+<div>
+<Header />
   <div class="container">
   <h2>Detail du produit</h2>
     <b-list-group>
@@ -9,10 +11,23 @@
     </b-list-group>
     <div class="divBtns">
       <btnReturn />
-      <b-button v-on:click="del(product.id)" class="btn btn-danger"
-          >Supprimer
-      </b-button>
+
+      <b-button
+                class="btn"
+                id="btnDelTicket"
+                variant="danger"
+                @click="$bvToast.show('delete')"
+              >
+               Supprimer
+              </b-button>
+      <b-toast id="delete" title="Delete" static no-auto-hide>
+                Etes-vous sur de vouloir supprimer ce ticket : <strong>{{product.name}}</strong> ?
+                <a v-on:click="del(product.id)" id="del" class="btn btn-primary link"
+                  >Valider</a
+                >
+      </b-toast>
     </div>
+  </div>
   </div>
 </template>
 
@@ -38,6 +53,9 @@ export default {
         .catch((error) => {
           this.errors = error.response.data.errors;
         });
+    },
+    confirmDelete() {
+      return confirm("Etes vous sur de vouloir delete ce ticket ?");
     },
   },
 };

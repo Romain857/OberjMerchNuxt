@@ -1,6 +1,8 @@
 <template>
+<div>
+<Header />
+<br>
     <div class="container">
-        <h1>OberjMerch</h1>
         <btnCreate />
         <div v-for="product in products">
             <b-card
@@ -18,6 +20,8 @@
                 <b-button :to="{ name: 'productDetail', params: { id: product.id } }" variant="primary">Detail</b-button>
             </b-card>
         </div>
+    </div>
+    <Footer />
     </div>
 </template>
 
