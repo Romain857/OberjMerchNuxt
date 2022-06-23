@@ -46,7 +46,7 @@
                   required
                 ></b-form-input>
               </b-input-group>
-
+    
               <b-input-group class="input">
                 <template #prepend>
                   <b-input-group-text class="label">En vente</b-input-group-text>
