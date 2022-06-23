@@ -2,7 +2,7 @@
 <div>
 <Header />
   <div class="container">
-  <h2>Modifier un produit : {{product.name}}</h2>
+  <h2>Modifier le produit : {{product.name}}</h2>
   <b-form @submit="up(product.id)" v-bind:key="product.id">       
         <b-form-group label="Nom" label-for="input">
             <b-form-input
@@ -55,14 +55,14 @@ export default {
   },
   async asyncData({ params, $axios }) {
     const product = await $axios.$get(
-      `https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/product/${params.id}`
+      `https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/products/${params.id}`
     );
     return { product };
   },
   methods: {
     up(id) {
       axios
-        .put("https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/product/" + id, {
+        .put("https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app/products/" + id, { 
           id: this.product.id,
           name: this.product.name,
           price: this.product.price,
