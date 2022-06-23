@@ -1,5 +1,5 @@
 <template>
-    <b-button id="btn" href="/productCreate" variant="dark">New Product</b-button>
+    <b-button id="btn" href="/productCreate" variant="dark">Nouveau Produit</b-button>
 </template>
 
 <style>
