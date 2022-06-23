@@ -11,10 +11,10 @@
       <b-navbar-nav class="ml-auto">
 
         <b-nav-item-dropdown text="Team" right>
-          <b-dropdown-item href="#">Gabus</b-dropdown-item>
-          <b-dropdown-item href="#">Rom1</b-dropdown-item>
-          <b-dropdown-item href="#">Red</b-dropdown-item>
-          <b-dropdown-item href="#">Yo</b-dropdown-item>
+          <b-dropdown-item href="#">Gabriel</b-dropdown-item>
+          <b-dropdown-item href="#">Romain</b-dropdown-item>
+          <b-dropdown-item href="#">Antoine</b-dropdown-item>
+          <b-dropdown-item href="#">Yohann</b-dropdown-item>
         </b-nav-item-dropdown>
 
       </b-navbar-nav>
