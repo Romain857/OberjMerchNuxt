@@ -1,3 +1,3 @@
 <template>
-    <b-button href="/" variant="outline-danger">Return</b-button>
+    <b-button href="/" variant="outline-danger">Retour</b-button>
 </template>
