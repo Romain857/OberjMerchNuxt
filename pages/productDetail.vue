@@ -5,7 +5,7 @@
   <h2>Detail du produit</h2>
     <b-list-group>
       <b-list-group-item><strong>Nom : </strong>{{product.name}}</b-list-group-item>
-      <b-list-group-item><strong>Prix : </strong>{{product.price}}</b-list-group-item>
+      <b-list-group-item><strong>Prix : </strong>{{product.price}} €</b-list-group-item>
       <b-list-group-item><strong>Description : </strong>{{product.description}}</b-list-group-item>
       <b-list-group-item><strong>En vente : </strong>{{product.is_offer}}</b-list-group-item>
     </b-list-group>

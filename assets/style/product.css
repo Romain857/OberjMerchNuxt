@@ -17,3 +17,13 @@
 #delete{
     margin-top: 2%;
 }
+
+
+
+#dash{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    gap: 2%;
+}
