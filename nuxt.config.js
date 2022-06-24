@@ -24,8 +24,6 @@ module.exports = {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -40,12 +38,13 @@ module.exports = {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
 
   axios: {
     proxy:true
   },
-   
+
   proxy: {
     '/api/': {
       target: 'https://yd-api-oberjmerch-6mvg7oyrgq-ew.a.run.app',
@@ -57,5 +56,19 @@ module.exports = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  auth: {
+    redirect: {
+      login: '/',
+      callback: '/callback',
+      logout: '/logout'
+    },
+    strategies: {
+      auth0: {
+        domain: 'dev-lrq82gfb.us.auth0.com',
+        client_id: 'cwFDDuAGJTW3z5qdGvsnrrBoNn8XuRpG'
+      }
+    }
   }
 }

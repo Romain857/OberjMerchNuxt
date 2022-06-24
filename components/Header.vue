@@ -6,23 +6,28 @@
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
-
+      <p v-if="$auth.loggedIn">
+        <a @click="this.$auth.logout()" class="b-skeleton-button">Logout</a>
+      </p>
+      <p v-else>
+        <a @click="this.$auth.loginWith('auth0')" class="b-skeleton-button">Login</a>
+      </p>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-
         <b-nav-item-dropdown text="Team" right>
           <b-dropdown-item href="#">Gabriel</b-dropdown-item>
           <b-dropdown-item href="#">Romain</b-dropdown-item>
           <b-dropdown-item href="#">Antoine</b-dropdown-item>
           <b-dropdown-item href="#">Yohann</b-dropdown-item>
         </b-nav-item-dropdown>
-
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
   </div>
 </template>
+<script>
 
+</script>
 <style>
     #title{
         text-align:center;

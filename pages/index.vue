@@ -1,18 +1,18 @@
 <template>
 <div>
-<Header />
-<br>
+<Header/>
+
 <div class="container">
+
 <h2>Liste des produits</h2>
-<btnCreate />
+<btnCreate/>
     <div id="dash">
         <div v-for="product in products">
             <b-card
                 id="card"
                 tag="product"
                 style="max-width: 20rem;"
-                class="mb-2"
-            >
+                class="mb-2">
                 <b-card-text>
                     Produit : <strong>{{product.name}}</strong>
                 </b-card-text>
@@ -22,7 +22,8 @@
             </b-card>
         </div>
     </div>
-    <Footer />
+
+    <Footer/>
     </div>
     </div>
 </template>
